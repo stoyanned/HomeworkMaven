@@ -1,3 +1,5 @@
+package org.example;
+
 import org.example.ImageResizer;
 import org.junit.jupiter.api.Test;
 
@@ -11,10 +13,10 @@ import static org.junit.Assert.assertEquals;
 public class ImageResizerTest {
     @Test
     public void testResizeImageJava() throws IOException {
-        File inputFile = new File("src/main/resources/outdoor-husky-dog.jpg");
-        File outputFile = new File("src/main/resources/resized_java.jpg");
-        int width = 400;
-        int height = 300;
+        File inputFile = new File("src/test/resources/outdoor-husky-dog.jpg");
+        File outputFile = new File("src/test/resources/resized_java.jpg");
+        final int width = 400;
+        final int height = 300;
 
         ImageResizer.resizeImageJava(inputFile, outputFile, width, height);
 
